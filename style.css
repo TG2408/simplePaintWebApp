@@ -1,6 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
 html, body {
-    margin: 0;
-    background-color: antiquewhite;
-    border: 5px solid sandybrown;
-    border-radius: 10px;
-  }
+  margin: 0;
+  padding: 0;
+}
+
+#draw {
+  background-color: #FAEBD7;
+  border: 15px solid sandybrown;
+  border-radius: 10px;
+
+}

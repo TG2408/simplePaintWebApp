@@ -1,14 +1,13 @@
 const canvas = document.querySelector('#draw');
 const ctx = canvas.getContext('2d');
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.width = (.75*window.innerWidth);
+canvas.height = (.95*window.innerHeight);
 
 ctx.strokeStyle = '#BADA55';
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
 ctx.lineWidth = 10;
-
 
 let isDrwaing = false;
 let lastX = 0;
@@ -27,14 +26,19 @@ function draw(ev) {
 function setOffset(ev) {
   isDrwaing = true;
   [lastX, lastY] = [ev.offsetX, lastY = ev.offsetY]
+  if (ev.ctrlKey) {
+      ctx.strokeStyle = "#FAEBD7";
+  } else {
+      ctx.strokeStyle = "#BADA55";
+  }
 }
 
 canvas.addEventListener('mousemove', draw);
-canvas.addEventListener('mousedown', setOffset /*() => isDrwaing = true*/);
+canvas.addEventListener('mousedown', setOffset);
 canvas.addEventListener('mouseup', () => isDrwaing = false);
 canvas.addEventListener('mouseout', () => isDrwaing = false);
 
 canvas.addEventListener('wheel', e => {
   if(e.deltaY > 0) ctx.lineWidth -= 3;
-  else ctx.lineWidth += 3;
+  else if (e.deltaY < 0)ctx.lineWidth += 3;
 })
