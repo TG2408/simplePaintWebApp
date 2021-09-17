@@ -11,7 +11,7 @@ html, body {
   background-color: #FAEBD7;
   border: 15px solid sandybrown;
   border-radius: 10px;
-
+  z-index: 2;
 }
 
 .grids {
@@ -84,3 +84,53 @@ html, body {
   font-size: 20px;
   margin: 2px 0;
 }
+
+#type {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: inline-block;
+  background-color: #FAEBD7;
+  z-index: -1;
+}
+
+#txtarea {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: inline-block;
+  background-color: #FAEBD7;
+  z-index: -1;
+  border: none;
+}
+
+.btn {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin: 5px;
+  border-radius: 12px;
+  padding: 10px 8px;
+  background-color: yellowgreen;
+}
+
+.btn:hover {
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+}
+
+#hints {
+  width: 100%;
+  margin: 10px;
+  padding: 5px;
+  text-align: center;
+  background-color: thistle;
+}
+
+ul{
+  margin: 0;
+  padding: 0 0 0 14px ;
+}
+
+
+
+

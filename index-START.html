@@ -10,6 +10,8 @@
 <div id="main">
   
   <div id="board">
+    
+    <textarea id="txtarea" rows="46" cols="155"></textarea>
     <canvas id="draw" width="800" height="800"></canvas>
   </div>
 
@@ -46,8 +48,19 @@
       <div onclick="fontFunc(this)" id="sizeXL" class="sizes" data-size="40">
         <div class="size">s</div>
       </div>
-
     </div>
+
+    <div id="btns">
+      <button onclick="writeFunc()" class="btn" id="write">WRITE</button>
+      <button onclick="penFunc()" class="btn" id="pen">PEN</button>
+    </div>
+  </div>
+  <div id="hints">
+    <h1>HELP</h1>
+    <ul>
+      <li>Scroll UP to incrase the size of pen</li>
+      <li>Scroll DOWN to decrase the size of pen</li>
+    </ul>
   </div>
 </div>
 

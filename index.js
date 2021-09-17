@@ -18,7 +18,6 @@ let dataColor = "";
 
 function draw(ev) {
   if (!isDrwaing) return; //this will return function when not moused down
-  console.log(ev);
   ctx.beginPath();
   ctx.moveTo(lastX, lastY);
   ctx.lineTo(ev.offsetX, ev.offsetY);
@@ -64,3 +63,19 @@ function colorFunc(color) {
 function fontFunc(size) {
   ctx.lineWidth = size.getAttribute("data-size");
 }
+
+function penFunc() {
+
+  let txtar =  document.getElementById("txtarea") ;
+  txt = txtar.value;
+  ctx.font = "normal 20px Arial";
+  ctx.translate(10,20);
+  ctx.fillText(txt,10,0);
+  txtar.style.zIndex = "-1";
+}
+
+function writeFunc() {
+  let txtar = document.getElementById("txtarea");
+  txtar.style.zIndex = "+1";
+}
+
