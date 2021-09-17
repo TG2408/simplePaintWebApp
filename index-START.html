@@ -6,11 +6,30 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<canvas id="draw" width="800" height="800"></canvas>
+<div id="main">
+  
+  <div id="board">
+    <canvas id="draw" width="800" height="800"></canvas>
+  </div>
 
-<button id="autoColor">Auto</button>
-
+  <div id="colorbox">
+    <div class="grids">
+      <div onclick="colorFunc(this)" id="red" class="grid" data-color="red"></div>
+      <div onclick="colorFunc(this)" id="green" class="grid" data-color="green"></div>
+      <div onclick="colorFunc(this)" id="black" class="grid" data-color="black"></div>
+      <div onclick="colorFunc(this)" id="orange" class="grid" data-color="orange"></div>
+      <div onclick="colorFunc(this)" id="yellow" class="grid" data-color="yellow"></div>
+      <div onclick="colorFunc(this)" id="blue" class="grid" data-color="blue"></div>
+      <div onclick="colorFunc(this)" id="brown" class="grid" data-color="brown"></div>
+      <div onclick="colorFunc(this)" id="sandybrown" class="grid" data-color="sandybrown"></div>
+      <div onclick="colorFunc(this)" id="fuchsia" class="grid" data-color="fuchsia"></div>
+      <div onclick="colorFunc(this)" id="gray" class="grid" data-color="gray"></div>
+      <div onclick="colorFunc(this)" id="white" class="grid" data-color="white"></div>
+      <div onclick="colorFunc(this)" id="FAEBD7" class="grid" data-color="#FAEBD7"></div>
+      <div onclick="colorFunc(this)" id="gradient" class="grid" data-color="gradient"></div>
+    </div>  
+  </div>
+</div>
 <script src="index.js"></script>
-
 </body>
 </html>

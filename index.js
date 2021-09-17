@@ -14,6 +14,7 @@ let lastX = 0;
 let lastY = 0;
 let hue = 0;
 let direction = true;
+let dataColor = "";
 
 function draw(ev) {
   if (!isDrwaing) return; //this will return function when not moused down
@@ -25,8 +26,9 @@ function draw(ev) {
   [lastX, lastY] = [ev.offsetX, lastY = ev.offsetY];
   if (ev.shiftKey) {
     ctx.strokeStyle = "#FAEBD7";
-  } else { 
-      autoColor();
+  } else {   
+    if (dataColor == "gradient") autoColor();
+    else ctx.strokeStyle = dataColor;
   }
 }
 
@@ -55,6 +57,7 @@ canvas.addEventListener('wheel', e => {
   else if (e.deltaY < 0)ctx.lineWidth += 3;
 })
 
-// document.getElementById("autoColor").addEventListener('click', () => {
-
-// })
+function colorFunc(c) {
+  dataColor = c.getAttribute("data-color");
+  console.log(dataColor);
+}

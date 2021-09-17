@@ -13,3 +13,39 @@ html, body {
   border-radius: 10px;
 
 }
+
+.grids {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  grid-gap: 4px;
+  background-color: #2196F3;
+  border: 4px solid #2196F3;
+}
+
+.grid {
+  padding: 25px;
+  border: 3px solid black;
+}
+
+#green {background-color: greenyellow;}
+#red {background-color: red;}
+#black {background-color: black;}
+#orange {background-color: orange;}
+#yellow {background-color: yellow;}
+#blue {background-color: blue;}
+#brown {background-color: brown;}
+#sandybrown {background-color: sandybrown;}
+#fuchsia {background-color: fuchsia;}
+#gray {background-color: gray;}
+#white {background-color: white;}
+#FAEBD7 {background-color: #FAEBD7;}
+#gradient {
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  grid-row: 7 ;
+  grid-column: 1  / span 2;
+}
+
+#main {
+  display: flex;
+}
