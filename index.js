@@ -57,7 +57,10 @@ canvas.addEventListener('wheel', e => {
   else if (e.deltaY < 0)ctx.lineWidth += 3;
 })
 
-function colorFunc(c) {
-  dataColor = c.getAttribute("data-color");
-  console.log(dataColor);
+function colorFunc(color) {
+  dataColor = color.getAttribute("data-color");
+}
+
+function fontFunc(size) {
+  ctx.lineWidth = size.getAttribute("data-size");
 }
