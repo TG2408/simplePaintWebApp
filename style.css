@@ -49,3 +49,38 @@ html, body {
 #main {
   display: flex;
 }
+
+#toolbox {
+  display: flex;
+  flex-direction: column;
+}
+
+#sizebox {
+  border: 2px solid black;
+  margin: 3px 0;
+}
+
+.size{ 
+  background-color: black;
+}
+
+.sizes {
+  border: 2px solid white;
+}
+
+#sizeS {
+  font-size: 5px;
+  padding: 8px 0;
+}
+#sizeM {
+  font-size: 10px;
+  padding: 5px 0;
+}
+#sizeL {
+  font-size: 15px;
+  margin: 2px 0;
+}
+#sizeXL {
+  font-size: 20px;
+  margin: 2px 0;
+}
